@@ -23,28 +23,18 @@ iPhone, iPad, Mac, and Apple Watch — 1,747 lines of Swift, zero external depen
 
 <table>
   <tr>
-    <td align="center"><strong>Meeting List</strong></td>
-    <td align="center"><strong>Live Cost Ticker</strong></td>
-    <td align="center"><strong>Statistics Dashboard</strong></td>
-    <td align="center"><strong>Participant Management</strong></td>
-  </tr>
-  <tr>
-    <td><img src="assets/screenshot-list.png" width="220" alt="Meeting list view showing multiple meetings with costs"/></td>
-    <td><img src="assets/screenshot-timer.png" width="220" alt="Live cost ticker updating in real time"/></td>
-    <td><img src="assets/screenshot-stats.png" width="220" alt="Statistics dashboard with 5 interactive charts"/></td>
-    <td><img src="assets/screenshot-participants.png" width="220" alt="Participant management with hourly and daily rates"/></td>
-  </tr>
-  <tr>
-    <td align="center"><strong>iPad Split View</strong></td>
-    <td align="center"><strong>Landscape Board</strong></td>
-    <td align="center"><strong>Multi-Currency</strong></td>
-    <td align="center"><strong>Apple Watch</strong></td>
-  </tr>
-  <tr>
-    <td><img src="assets/screenshot-ipad.png" width="220" alt="iPad navigation split view"/></td>
-    <td><img src="assets/screenshot-landscape.png" width="220" alt="Landscape live cost board"/></td>
-    <td><img src="assets/screenshot-currency.png" width="220" alt="Multi-currency conversion at display time"/></td>
-    <td><img src="assets/screenshot-watch.png" width="220" alt="Apple Watch companion app"/></td>
+    <td align="center" width="33%">
+      <img src="assets/screenshot-meeting-list-alt.png" width="220" alt="Meeting List with Live Cost" /><br>
+      <sub><b>Meeting List with Live Cost</b></sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/screenshot-meeting-list.png" width="220" alt="Meeting List" /><br>
+      <sub><b>Meeting List</b></sub>
+    </td>
+    <td align="center" width="33%">
+      <img src="assets/screenshot-ipad.png" width="300" alt="iPad View" /><br>
+      <sub><b>iPad</b></sub>
+    </td>
   </tr>
 </table>
 

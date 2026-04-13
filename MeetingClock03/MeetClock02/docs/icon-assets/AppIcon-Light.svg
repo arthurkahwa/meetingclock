@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>MeetClock App Icon – Light</title>
+
+  <defs>
+
+    <!-- Background: radial warm-black -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%"   stop-color="#1A1210"/>
+      <stop offset="100%" stop-color="#0D0908"/>
+    </radialGradient>
+
+    <!-- Char/burn zone: transparent bill-green → dark char → ash
+         Coordinates are in the bill group's local (pre-rotation) space. -->
+    <linearGradient id="char-grad"
+        x1="0" y1="486" x2="0" y2="384"
+        gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#4A5240" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#2A1A0A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1A0A00" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Flame inner core: amber → near-white
+         Coordinates are in root (unrotated) space. -->
+    <linearGradient id="flame-core-grad"
+        x1="0" y1="417" x2="0" y2="148"
+        gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#FFF0A0"/>
+    </linearGradient>
+
+    <!-- Glow halo for inner flame core -->
+    <filter id="flame-glow"
+        x="-60%" y="-60%" width="220%" height="220%"
+        color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
+      <feComponentTransfer in="blur" result="tinted-blur">
+        <feFuncR type="linear" slope="1"/>
+        <feFuncG type="linear" slope="0.651"/>
+        <feFuncB type="linear" slope="0.137"/>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="tinted-blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft blur for the two smallest embers (motion/atmosphere) -->
+    <filter id="ember-blur"
+        x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+
+    <!-- Clip all content to icon bounds -->
+    <clipPath id="icon-clip">
+      <rect width="1024" height="1024"/>
+    </clipPath>
+
+  </defs>
+
+  <g clip-path="url(#icon-clip)">
+
+    <!-- ═══════════════════════════════════════════════════
+         LAYER: background
+         Full-bleed radial gradient — centre slightly warmer
+         than edge to suggest residual heat.
+    ════════════════════════════════════════════════════════ -->
+    <g id="background">
+      <rect width="1024" height="1024" fill="url(#bg-grad)"/>
+    </g>
+
+    <!-- ═══════════════════════════════════════════════════
+         LAYER: banknote
+         All sub-layers are in the bill's rotated space.
+         Rotation is 8° clockwise around the icon centre.
+    ════════════════════════════════════════════════════════ -->
+    <g id="banknote" transform="rotate(8, 512, 512)">
+
+      <!-- Bill body: 614×256, centred at (512,512) -->
+      <g id="bill-body">
+        <rect x="199" y="384" width="614" height="256" rx="6"
+              fill="#4A5240" stroke="#2A2E24" stroke-width="3"/>
+      </g>
+
+      <!-- Inner face panel: engraved interior depression -->
+      <g id="bill-inner-panel">
+        <rect x="236" y="417" width="540" height="190" rx="3"
+              fill="#3E4535"/>
+      </g>
+
+      <!-- Corner denomination symbols -->
+      <g id="corner-symbols"
+         font-family="'SF Mono','Courier New',monospace"
+         font-size="26" font-weight="600" fill="#8A9478">
+        <text x="260" y="447" text-anchor="start">$</text>
+        <text x="752" y="447" text-anchor="end">$</text>
+        <text x="260" y="592" text-anchor="start">$</text>
+        <text x="752" y="592" text-anchor="end">$</text>
+      </g>
+
+      <!-- Clock easter egg: left third of inner panel
+           Hands set to 10:10 — readable as "time running out" in context.
+           Visible at 1024px; not load-bearing at small sizes. -->
+      <g id="clock-easter-egg">
+        <!-- Clock face -->
+        <circle cx="310" cy="512" r="60" fill="#E8E0C8"/>
+        <!-- Hour hand → 10 o'clock: direction (-0.866, -0.5), length 32 -->
+        <line x1="310" y1="512" x2="282" y2="496"
+              stroke="#2A2E24" stroke-width="5" stroke-linecap="round"/>
+        <!-- Minute hand → 2 o'clock: direction (+0.866, -0.5), length 44 -->
+        <line x1="310" y1="512" x2="348" y2="490"
+              stroke="#2A2E24" stroke-width="3" stroke-linecap="round"/>
+        <!-- Centre pivot -->
+        <circle cx="310" cy="512" r="5" fill="#2A2E24"/>
+      </g>
+
+      <!-- Char / burn zone: gradient overlay covers top ~40% of bill.
+           Irregular top edge simulates tearing and charring. -->
+      <g id="char-zone">
+        <path d="M 199,486
+                 L 813,486
+                 L 813,384
+                 C 775,396 738,377 700,392
+                 C 662,407 625,379 588,394
+                 C 550,409 513,381 476,396
+                 C 438,409 400,382 362,395
+                 C 322,408 261,385 199,384
+                 Z"
+              fill="url(#char-grad)"/>
+      </g>
+
+      <!-- Subtle page curl at top-right corner.
+           Delete if it reads as noise at small sizes. -->
+      <g id="curl-detail" opacity="0.65">
+        <path d="M 795,384 C 810,386 813,398 813,408
+                 C 807,398 800,393 795,384 Z"
+              fill="#1A0D00"/>
+      </g>
+
+    </g>
+    <!-- end banknote -->
+
+    <!-- ═══════════════════════════════════════════════════
+         LAYER: flame
+         Three organic shapes at absolute coordinates
+         (not rotated with the bill — fire goes up).
+    ════════════════════════════════════════════════════════ -->
+    <g id="flame">
+
+      <!-- Outer flame: widest silhouette, burnt red.
+           Tallest tongue reaches y≈147 (≈15% from top edge). -->
+      <g id="flame-outer">
+        <path d="M 360,418
+                 C 340,372 298,294 362,214
+                 C 373,179 398,160 418,185
+                 C 428,160 448,143 465,165
+                 C 475,140 493,124 512,147
+                 C 525,126 543,133 556,158
+                 C 566,138 583,136 597,167
+                 C 608,195 615,233 602,272
+                 C 618,323 646,389 630,420
+                 C 576,441 468,445 360,418 Z"
+              fill="#C0390B"/>
+      </g>
+
+      <!-- Mid flame: narrower, ember orange -->
+      <g id="flame-mid">
+        <path d="M 400,422
+                 C 384,382 360,313 403,243
+                 C 413,209 433,187 451,203
+                 C 459,181 473,166 489,183
+                 C 497,161 509,147 522,164
+                 C 532,147 547,153 559,174
+                 C 567,197 576,229 569,265
+                 C 581,315 607,395 591,422
+                 C 549,441 449,441 400,422 Z"
+              fill="#E8621A"/>
+      </g>
+
+      <!-- Inner core: amber→white gradient, with ambient glow filter -->
+      <g id="flame-inner" filter="url(#flame-glow)">
+        <path d="M 440,417
+                 C 434,383 420,327 443,269
+                 C 451,239 463,216 477,229
+                 C 483,211 494,197 508,211
+                 C 517,194 528,201 536,219
+                 C 542,239 548,273 541,309
+                 C 547,355 563,403 551,417
+                 C 527,433 464,433 440,417 Z"
+              fill="url(#flame-core-grad)"/>
+      </g>
+
+    </g>
+    <!-- end flame -->
+
+    <!-- ═══════════════════════════════════════════════════
+         LAYER: embers
+         4–6 amber particles drifting up-right from flame tip.
+         Smallest two have a soft blur for atmospheric scatter.
+    ════════════════════════════════════════════════════════ -->
+    <g id="embers" fill="#F5A623">
+      <circle cx="680" cy="130" r="4"   opacity="0.75"/>
+      <circle cx="740" cy="95"  r="3"   opacity="0.55"/>
+      <circle cx="620" cy="110" r="2.5" opacity="0.65"/>
+      <circle cx="700" cy="72"  r="2"   opacity="0.40" filter="url(#ember-blur)"/>
+      <circle cx="760" cy="140" r="3.5" opacity="0.50" filter="url(#ember-blur)"/>
+    </g>
+    <!-- end embers -->
+
+  </g>
+</svg>

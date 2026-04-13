@@ -1,0 +1,11 @@
+{
+  "bundleId": "de.chapter.MeetClock02",
+  "outputDir": "appstore/screenshots/raw",
+  "steps": [
+    { "action": "launch" },
+    { "action": "wait", "duration_ms": 2000 },
+    { "action": "screenshot", "name": "01_meeting_list" },
+    { "action": "wait", "duration_ms": 1000 },
+    { "action": "screenshot", "name": "02_meeting_list_alt" }
+  ]
+}

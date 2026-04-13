@@ -1,0 +1,93 @@
+{
+  "fill" : {
+    "automatic-gradient" : "extended-srgb:0.00000,0.53333,1.00000,1.00000"
+  },
+  "groups" : [
+    {
+      "layers" : [
+        {
+          "hidden" : false,
+          "image-name" : "dollarsign.circle.fill.svg",
+          "name" : "dollarsign.circle.fill",
+          "position" : {
+            "scale" : 1.46,
+            "translation-in-points" : [
+              202.7661875,
+              185.85069999999996
+            ]
+          }
+        },
+        {
+          "hidden" : false,
+          "image-name" : "clock.svg",
+          "name" : "clock",
+          "position" : {
+            "scale" : 1.46,
+            "translation-in-points" : [
+              -193.66685,
+              185.85070000000002
+            ]
+          }
+        },
+        {
+          "image-name" : "person.3.fill.svg",
+          "name" : "person.3.fill",
+          "position" : {
+            "scale" : 1.6,
+            "translation-in-points" : [
+              0,
+              -206.48400000000004
+            ]
+          }
+        }
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+
+      ],
+      "position" : {
+        "scale" : 0.91,
+        "translation-in-points" : [
+          0,
+          0
+        ]
+      },
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    },
+    {
+      "layers" : [
+
+      ],
+      "shadow" : {
+        "kind" : "neutral",
+        "opacity" : 0.5
+      },
+      "translucency" : {
+        "enabled" : true,
+        "value" : 0.5
+      }
+    }
+  ],
+  "supported-platforms" : {
+    "circles" : [
+      "watchOS"
+    ],
+    "squares" : "shared"
+  }
+}

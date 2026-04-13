@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg"
+     viewBox="0 0 1024 1024" width="1024" height="1024">
+  <title>MeetClock App Icon – Dark</title>
+
+  <defs>
+
+    <!-- Background: deeper near-black, less warm than light variant -->
+    <radialGradient id="bg-grad" cx="50%" cy="50%" r="70%" fx="50%" fy="50%">
+      <stop offset="0%"   stop-color="#0F0B0A"/>
+      <stop offset="100%" stop-color="#080504"/>
+    </radialGradient>
+
+    <!-- Char/burn zone: bottom stop matches darker bill colour -->
+    <linearGradient id="char-grad"
+        x1="0" y1="486" x2="0" y2="384"
+        gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#3E4636" stop-opacity="0"/>
+      <stop offset="50%"  stop-color="#2A1A0A" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#1A0A00" stop-opacity="1"/>
+    </linearGradient>
+
+    <!-- Flame inner core: identical to light variant -->
+    <linearGradient id="flame-core-grad"
+        x1="0" y1="417" x2="0" y2="148"
+        gradientUnits="userSpaceOnUse">
+      <stop offset="0%"   stop-color="#F5A623"/>
+      <stop offset="100%" stop-color="#FFF0A0"/>
+    </linearGradient>
+
+    <!-- Glow halo for inner flame core -->
+    <filter id="flame-glow"
+        x="-60%" y="-60%" width="220%" height="220%"
+        color-interpolation-filters="sRGB">
+      <feGaussianBlur in="SourceGraphic" stdDeviation="12" result="blur"/>
+      <feComponentTransfer in="blur" result="tinted-blur">
+        <feFuncR type="linear" slope="1"/>
+        <feFuncG type="linear" slope="0.651"/>
+        <feFuncB type="linear" slope="0.137"/>
+        <feFuncA type="linear" slope="0.6"/>
+      </feComponentTransfer>
+      <feMerge>
+        <feMergeNode in="tinted-blur"/>
+        <feMergeNode in="SourceGraphic"/>
+      </feMerge>
+    </filter>
+
+    <!-- Soft blur for the two smallest embers -->
+    <filter id="ember-blur"
+        x="-150%" y="-150%" width="400%" height="400%">
+      <feGaussianBlur stdDeviation="1.5"/>
+    </filter>
+
+    <!-- Clip all content to icon bounds -->
+    <clipPath id="icon-clip">
+      <rect width="1024" height="1024"/>
+    </clipPath>
+
+  </defs>
+
+  <g clip-path="url(#icon-clip)">
+
+    <!-- ═══════════════════════════════════════════════════
+         LAYER: background
+         Deeper than light variant; reads as distinctly darker.
+    ════════════════════════════════════════════════════════ -->
+    <g id="background">
+      <rect width="1024" height="1024" fill="url(#bg-grad)"/>
+    </g>
+
+    <!-- ═══════════════════════════════════════════════════
+         LAYER: banknote
+         Bill is more desaturated than light variant.
+    ════════════════════════════════════════════════════════ -->
+    <g id="banknote" transform="rotate(8, 512, 512)">
+
+      <!-- Bill body: desaturated olive — less green, more grey -->
+      <g id="bill-body">
+        <rect x="199" y="384" width="614" height="256" rx="6"
+              fill="#3E4636" stroke="#242A20" stroke-width="3"/>
+      </g>
+
+      <!-- Inner face panel -->
+      <g id="bill-inner-panel">
+        <rect x="236" y="417" width="540" height="190" rx="3"
+              fill="#353C2E"/>
+      </g>
+
+      <!-- Corner denomination symbols -->
+      <g id="corner-symbols"
+         font-family="'SF Mono','Courier New',monospace"
+         font-size="26" font-weight="600" fill="#768066">
+        <text x="260" y="447" text-anchor="start">$</text>
+        <text x="752" y="447" text-anchor="end">$</text>
+        <text x="260" y="592" text-anchor="start">$</text>
+        <text x="752" y="592" text-anchor="end">$</text>
+      </g>
+
+      <!-- Clock easter egg: identical position and proportions -->
+      <g id="clock-easter-egg">
+        <circle cx="310" cy="512" r="60" fill="#D8D0B8"/>
+        <line x1="310" y1="512" x2="282" y2="496"
+              stroke="#222820" stroke-width="5" stroke-linecap="round"/>
+        <line x1="310" y1="512" x2="348" y2="490"
+              stroke="#222820" stroke-width="3" stroke-linecap="round"/>
+        <circle cx="310" cy="512" r="5" fill="#222820"/>
+      </g>
+
+      <!-- Char / burn zone: same irregular top edge -->
+      <g id="char-zone">
+        <path d="M 199,486
+                 L 813,486
+                 L 813,384
+                 C 775,396 738,377 700,392
+                 C 662,407 625,379 588,394
+                 C 550,409 513,381 476,396
+                 C 438,409 400,382 362,395
+                 C 322,408 261,385 199,384
+                 Z"
+              fill="url(#char-grad)"/>
+      </g>
+
+      <!-- Subtle page curl -->
+      <g id="curl-detail" opacity="0.65">
+        <path d="M 795,384 C 810,386 813,398 813,408
+                 C 807,398 800,393 795,384 Z"
+              fill="#160B00"/>
+      </g>
+
+    </g>
+    <!-- end banknote -->
+
+    <!-- ═══════════════════════════════════════════════════
+         LAYER: flame
+         Identical to light variant — warm colours need no
+         adjustment for dark backgrounds.
+    ════════════════════════════════════════════════════════ -->
+    <g id="flame">
+
+      <g id="flame-outer">
+        <path d="M 360,418
+                 C 340,372 298,294 362,214
+                 C 373,179 398,160 418,185
+                 C 428,160 448,143 465,165
+                 C 475,140 493,124 512,147
+                 C 525,126 543,133 556,158
+                 C 566,138 583,136 597,167
+                 C 608,195 615,233 602,272
+                 C 618,323 646,389 630,420
+                 C 576,441 468,445 360,418 Z"
+              fill="#C0390B"/>
+      </g>
+
+      <g id="flame-mid">
+        <path d="M 400,422
+                 C 384,382 360,313 403,243
+                 C 413,209 433,187 451,203
+                 C 459,181 473,166 489,183
+                 C 497,161 509,147 522,164
+                 C 532,147 547,153 559,174
+                 C 567,197 576,229 569,265
+                 C 581,315 607,395 591,422
+                 C 549,441 449,441 400,422 Z"
+              fill="#E8621A"/>
+      </g>
+
+      <g id="flame-inner" filter="url(#flame-glow)">
+        <path d="M 440,417
+                 C 434,383 420,327 443,269
+                 C 451,239 463,216 477,229
+                 C 483,211 494,197 508,211
+                 C 517,194 528,201 536,219
+                 C 542,239 548,273 541,309
+                 C 547,355 563,403 551,417
+                 C 527,433 464,433 440,417 Z"
+              fill="url(#flame-core-grad)"/>
+      </g>
+
+    </g>
+    <!-- end flame -->
+
+    <!-- ═══════════════════════════════════════════════════
+         LAYER: embers
+         Identical to light variant.
+    ════════════════════════════════════════════════════════ -->
+    <g id="embers" fill="#F5A623">
+      <circle cx="680" cy="130" r="4"   opacity="0.75"/>
+      <circle cx="740" cy="95"  r="3"   opacity="0.55"/>
+      <circle cx="620" cy="110" r="2.5" opacity="0.65"/>
+      <circle cx="700" cy="72"  r="2"   opacity="0.40" filter="url(#ember-blur)"/>
+      <circle cx="760" cy="140" r="3.5" opacity="0.50" filter="url(#ember-blur)"/>
+    </g>
+    <!-- end embers -->
+
+  </g>
+</svg>

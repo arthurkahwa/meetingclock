@@ -1,0 +1,38 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(xcodebuild:*)",
+      "mcp__xcode__XcodeListWindows",
+      "mcp__xcode__XcodeLS",
+      "mcp__xcode__BuildProject",
+      "Bash(git checkout:*)",
+      "Bash(python3:*)",
+      "mcp__xcode__GetTestList",
+      "mcp__xcode__RunSomeTests",
+      "mcp__xcode__XcodeRM",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "mcp__xcode__XcodeWrite",
+      "mcp__xcode__XcodeMakeDir",
+      "mcp__xcode__XcodeMV",
+      "Bash(wait)",
+      "Skill(claude-md-management:revise-claude-md)",
+      "Bash(asc --version)",
+      "Bash(asc auth:*)",
+      "Bash(asc apps:*)",
+      "Bash(asc builds:*)",
+      "Bash(asc testflight:*)",
+      "Bash(asc xcode:*)",
+      "Bash(asc review:*)",
+      "Bash(asc release:*)",
+      "Bash(xcrun simctl:*)",
+      "Bash(asc metadata:*)",
+      "Bash(asc screenshots:*)",
+      "Bash(asc versions:*)",
+      "Bash(find:*)",
+      "Bash(sips -g pixelWidth -g pixelHeight /Users/arthur/Developer/meetingClock/MeetingClock03/MeetClock02/appstore/screenshots/raw/01_meeting_list.png /Users/arthur/Developer/meetingClock/MeetingClock03/MeetClock02/appstore/screenshots/raw/02_meeting_list_alt.png /Users/arthur/Developer/meetingClock/MeetingClock03/MeetClock02/appstore/screenshots/raw/ipad/01_meeting_list_ipad.png)",
+      "Bash(asc localizations:*)",
+      "Bash(mkdir:*)"
+    ]
+  }
+}
