@@ -23,16 +23,20 @@ iPhone, iPad, Mac, and Apple Watch — 1,747 lines of Swift, zero external depen
 
 <table>
   <tr>
-    <td align="center" width="33%">
-      <img src="assets/screenshot-meeting-list-alt.png" width="220" alt="Meeting List with Live Cost" /><br>
-      <sub><b>Meeting List with Live Cost</b></sub>
-    </td>
-    <td align="center" width="33%">
-      <img src="assets/screenshot-meeting-list.png" width="220" alt="Meeting List" /><br>
+    <td align="center" width="25%">
+      <img src="screenshots/raw_v2/iphone/en-US/light/01_landing.png" width="220" alt="Meeting List" /><br>
       <sub><b>Meeting List</b></sub>
     </td>
-    <td align="center" width="33%">
-      <img src="assets/screenshot-ipad.png" width="300" alt="iPad View" /><br>
+    <td align="center" width="25%">
+      <img src="screenshots/raw_v2/iphone/en-US/light/02_running_primary.png" width="220" alt="Live Cost Ticker" /><br>
+      <sub><b>Live Cost Ticker</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="screenshots/raw_v2/iphone/en-US/light/03_running_alternate.png" width="220" alt="Running Alternate" /><br>
+      <sub><b>Running Alternate</b></sub>
+    </td>
+    <td align="center" width="25%">
+      <img src="screenshots/raw_v2/ipad/en-US/light/02_running_primary.png" width="260" alt="iPad" /><br>
       <sub><b>iPad</b></sub>
     </td>
   </tr>
