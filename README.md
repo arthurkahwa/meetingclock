@@ -24,11 +24,11 @@ iPhone, iPad, Mac, and Apple Watch — 1,747 lines of Swift, zero external depen
 <table>
   <tr>
     <td align="center" width="25%">
-      <img src="screenshots/raw_v2/iphone/en-US/light/01_landing.png" width="220" alt="Meeting List" /><br>
+      <img src="screenshots/raw/01_meeting_list.png" width="220" alt="Meeting List" /><br>
       <sub><b>Meeting List</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="screenshots/raw_v2/iphone/en-US/light/02_running_primary.png" width="220" alt="Live Cost Ticker" /><br>
+      <img src="screenshots/raw_v2/ipad/fr-FR/light/01_landing.png" width="220" alt="Live Cost Ticker" /><br>
       <sub><b>Live Cost Ticker</b></sub>
     </td>
     <td align="center" width="25%">
@@ -36,7 +36,7 @@ iPhone, iPad, Mac, and Apple Watch — 1,747 lines of Swift, zero external depen
       <sub><b>Running Alternate</b></sub>
     </td>
     <td align="center" width="25%">
-      <img src="screenshots/raw_v2/ipad/en-US/light/02_running_primary.png" width="260" alt="iPad" /><br>
+      <img src="screenshots/raw_v2/iphone/zh-Hans/dark/02_running_primary.png" width="260" alt="iPad" /><br>
       <sub><b>iPad</b></sub>
     </td>
   </tr>
